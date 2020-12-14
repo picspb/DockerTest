@@ -3,8 +3,11 @@
 
 ## Образы
 команды работы с образами
+
+### получить образ alpine Linux из репозитория
+```docker pull alpine```  
+
 ```
-docker pull alpine - получить образ alpine Linux из репозитория 
 docker images - просмотр локальных (скачанных) образов
 docker run -it alpine - запуск образа интерактивно(-i) с терминалом (-t) 
 docker run -d alpine - запуск образа в фоне (-d)
