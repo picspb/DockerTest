@@ -35,3 +35,20 @@ docker exec -it asp bash            - запуск приложения bash в�
 docker attach asp                   - подключится к работающему контейнеру
 Ctrl+P и сразу Ctrl+Q               - отключиться от работающего контеййнера (не останавливя его работу)
 ```
+## DockerFile
+```
+#FROM - из какого образа строим контейнер
+FROM alpine
+
+RUN apk add npm && npm i -g http-server
+
+VOLUME /home/server
+
+WORKDIR /home/server
+
+COPY ./ /home/server/
+
+EXPOSE 808
+
+CMD http-server
+```
