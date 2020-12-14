@@ -45,14 +45,18 @@ FROM alpine
 #здесь ставим NODE.JS - пакет npm и http-server
 RUN apk add npm && npm i -g http-server
 
-#создаём каталог /home/server внутри контейнера
+#создаём каталог /home/server внутри контейнера (точка монтирования)
 VOLUME /home/server
-#назначаем рабочий каталог /home/server внутри контейнера
+
+#назначаем рабочий каталог /home/server внутри контейнера (ограничиваем видимость)
 WORKDIR /home/server
+
 #копируем все файлы из текущего каталога в каталог контейнера /home/server
 COPY ./ /home/server/
+
 #открываем порт 8080
 EXPOSE 8080
 
+#запускаем http-server
 CMD http-server
 ```
