@@ -60,7 +60,7 @@ EXPOSE 8080
 #запускаем http-server
 CMD http-server
 ```
-### Запуск сборки образа
+### Сборка образа
 ```
 docker build -t picspb/node:v1 .
 ```
