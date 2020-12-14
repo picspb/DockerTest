@@ -14,7 +14,8 @@ docker run -it alpine             - запуск образа интеракти
 docker run -d alpine              - запуск образа в фоне (-d)
 docker run -d --name alp alpine   - запуск образа с именем alp (--name)
 docker run -d -p 3000:8080 alpine - запуск c пробросом портов изнутри 8080, снаружи 3000
-docker run -it -v c:\YandexDisk:/home/Yandex alpine - запуск c монтированием внешней папки внутрь запускаемого образа
+docker run -it -v c:\YandexDisk:/home/Yandex alpine 
+                        - запуск c монтированием внешней папки внутрь запускаемого образа
 ```
 
 ## Контейнеры
