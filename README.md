@@ -40,15 +40,19 @@ Ctrl+P и сразу Ctrl+Q               - отключиться от рабо
 #FROM - из какого образа строим контейнер
 FROM alpine
 
+#запускаем нужные нам пакеты. 
+#каждый RUN создаёт новый слой, поэтому чтобы не плодить слои, разделяем команды && или \ && 
+#здесь ставим NODE.JS - пакет npm и http-server
 RUN apk add npm && npm i -g http-server
 
+#создаём каталог /home/server внутри контейнера
 VOLUME /home/server
-
+#назначаем рабочий каталог /home/server внутри контейнера
 WORKDIR /home/server
-
+#копируем все файлы из текущего каталога в каталог контейнера /home/server
 COPY ./ /home/server/
-
-EXPOSE 808
+#открываем порт 8080
+EXPOSE 8080
 
 CMD http-server
 ```
