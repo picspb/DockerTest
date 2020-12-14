@@ -64,3 +64,7 @@ CMD http-server
 ```
 docker build -t picspb/node:v1 .
 ```
+### Запуск образа
+```
+docker run -it --name node-dru -p 3000:8080 picspb/node:v1
+```
