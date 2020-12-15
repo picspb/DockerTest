@@ -38,6 +38,7 @@ docker attach asp                   - подключится к работающ
 Ctrl+P и сразу Ctrl+Q               - отключиться от работающего контеййнера (не останавливя его работу)
 ```
 ## DockerFile
+https://www.youtube.com/watch?v=Lu1ziKbQYIQ&t=13s
 ```
 #FROM - из какого образа строим контейнер
 FROM alpine
