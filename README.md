@@ -67,11 +67,13 @@ CMD http-server
 ```
 docker build -t picspb/node:v1 .
 docker build -t picspb/pic-web-server-ext:v1 -f Dockerfile.ex .
+docker build -t picspb/pic-web-server-int:v1 -f Dockerfile.in .
 ```
 ### Запуск образа
 ```
 docker run -it --name node-dru -p 3000:8080 picspb/node:v1
 docker run -it --name web-ext -p 3000:3000 picspb/pic-web-server-ext:v1
+docker run -it --name web-int -p 3000:3000 picspb/pic-web-server-int:v1
 ```
 ### Отправка образа в DockerHub
 ```
