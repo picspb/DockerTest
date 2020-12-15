@@ -1,6 +1,8 @@
 # DockerTest
 Тестирование работы с ДокерХабом
 
+https://www.youtube.com/watch?v=Sa7uOGczoHc&t=490s
+
 ## Образы
 ```
 docker images                     - просмотр локальных (скачанных) образов
