@@ -66,10 +66,12 @@ CMD http-server
 ### Сборка образа
 ```
 docker build -t picspb/node:v1 .
+docker build -t picspb/pic-web-server-ext:v1 -f Dockerfile.ex .
 ```
 ### Запуск образа
 ```
 docker run -it --name node-dru -p 3000:8080 picspb/node:v1
+docker run -it --name web-ext -p 3000:3000 picspb/pic-web-server-ext:v1
 ```
 ### Отправка образа в DockerHub
 ```
