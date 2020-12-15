@@ -75,3 +75,8 @@ docker run -it --name node-dru -p 3000:8080 picspb/node:v1
 ```
 docker push picspb/node:v1
 ````
+### Получение образа с DockerHub
+```
+docker pull picspb/node:v1
+````
+
